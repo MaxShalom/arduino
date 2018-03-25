@@ -56,7 +56,7 @@ void loop() {
   if (rowOne = HIGH) {
     if (buttonStateOne == HIGH) {
       // turn LED off:
-      digitalWrite(buttonOne, LOW);
+      digitalWrite(rowOne, LOW);
       score++;
       lcd.display();
     }
@@ -65,7 +65,7 @@ void loop() {
   if (rowTwo = HIGH) {
     if (buttonStateTwo == HIGH) {
       // turn LED off:
-      digitalWrite(buttonTwo, LOW);
+      digitalWrite(rowTwo, LOW);
       score++;
       lcd.display();
     }
@@ -74,7 +74,7 @@ void loop() {
   if (rowThree = HIGH) {
     if (buttonStateThree == HIGH) {
       // turn LED off:
-      digitalWrite(buttonThree, LOW);
+      digitalWrite(rowThree, LOW);
       score++;
       lcd.display();
     }
@@ -83,7 +83,7 @@ void loop() {
   if (rowFour = HIGH) {
     if (buttonStateFour == HIGH) {
       // turn LED off:
-      digitalWrite(buttonFour, LOW);
+      digitalWrite(rowFour, LOW);
       score++;
       lcd.display();
     }
