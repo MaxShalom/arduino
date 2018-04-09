@@ -2,22 +2,22 @@
   #include <LiquidCrystal.h>
 
   
-  // Initialize 
-  const int rowOne = 13;           // the number of the LED pin
+  // Initialize
+  const int rowOne = 13;            // the number of the LED pin
   const int rowTwo =  12;
   const int rowThree =  11;
   const int rowFour =  10;
   
-  const int buttonOne =  13;       // the number of the Button pin
+  const int buttonOne =  13;        // the number of the Button pin
   const int buttonTwo =  12;
   const int buttonThree =  11;
   const int buttonFour =  10;
   
-  const int row = random(10, 14);  //Chooses random light to light up
+  const int row = random(10, 14);   //Chooses random light to light up
 
   const int score;
   
-  const int buttonStateOne = 0;    // Buttons
+  const int buttonStateOne = 0;     // Buttons
   const int buttonStateTwo = 0;  
   const int buttonStateThree = 0;  
   const int buttonStateFour = 0;
@@ -53,7 +53,7 @@ void loop() {
   digitalWrite(row, HIGH);
   delay(2000);
   
-  if (rowOne = HIGH) {
+  if (rowOne == HIGH) {
     if (buttonStateOne == HIGH) {
       // turn LED off:
       digitalWrite(rowOne, LOW);
@@ -62,7 +62,7 @@ void loop() {
     }
   }
 
-  if (rowTwo = HIGH) {
+  if (rowTwo == HIGH) {
     if (buttonStateTwo == HIGH) {
       // turn LED off:
       digitalWrite(rowTwo, LOW);
@@ -71,7 +71,7 @@ void loop() {
     }
   }
 
-  if (rowThree = HIGH) {
+  if (rowThree == HIGH) {
     if (buttonStateThree == HIGH) {
       // turn LED off:
       digitalWrite(rowThree, LOW);
@@ -80,7 +80,7 @@ void loop() {
     }
   }
 
-  if (rowFour = HIGH) {
+  if (rowFour ==  HIGH) {
     if (buttonStateFour == HIGH) {
       // turn LED off:
       digitalWrite(rowFour, LOW);
