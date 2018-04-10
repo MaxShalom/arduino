@@ -1,41 +1,30 @@
-/*
-Adafruit Arduino - Lesson 3. RGB LED
-*/
+int ledPin = 11;
+const int buttonPin = 2; 
+int buttonState = 0;
 
-int redPin = 11;
-int greenPin = 10;
-int bluePin = 9;
-int colorOne = random(0, 255);
-int colorTwo = random(0, 255);
-int colorThree = random(0, 255);
-
-//uncomment this line if using a Common Anode LED
-//#define COMMON_ANODE
+#define COMMON_ANODE
 
 void setup()
 {
-  pinMode(redPin, OUTPUT);
-  pinMode(greenPin, OUTPUT);
-  pinMode(bluePin, OUTPUT);  
+  pinMode(ledPin, OUTPUT);
+  pinMode(buttonPin, INPUT);
 }
 
 void loop()
 {
+  
+  int colorOne = random(0, 255);
+  int colorTwo = random(0, 255);
+  int colorThree = random(0, 255);
+  
   setColor(colorOne, colorTwo, colorThree);
   delay(1000);
-  
-  /*setColor(255, 0, 0);  // red
-  delay(1000);
-  setColor(0, 255, 0);  // green
-  delay(1000);
-  setColor(0, 0, 255);  // blue
-  delay(1000);
-  setColor(255, 255, 0);  // yellow
-  delay(1000);  
-  setColor(80, 0, 80);  // purple
-  delay(1000);
-  setColor(0, 255, 255);  // aqua
-  delay(1000);*/
+
+  buttonState = digitalRead(buttonPin);
+
+  if (buttonState == HIGH) {
+    digitalWrite(ledPin, LOW);
+  }
 }
 
 void setColor(int red, int green, int blue)
@@ -45,7 +34,4 @@ void setColor(int red, int green, int blue)
     green = 255 - green;
     blue = 255 - blue;
   #endif
-  analogWrite(redPin, red);
-  analogWrite(greenPin, green);
-  analogWrite(bluePin, blue);  
 }
