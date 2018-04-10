@@ -1,5 +1,4 @@
-  // Import
-  #include <LiquidCrystal.h>
+#include <LiquidCrystal.h>
 
   
   // Initialize
@@ -8,19 +7,19 @@
   const int rowThree =  11;
   const int rowFour =  10;
   
-  const int buttonOne =  13;        // the number of the Button pin
-  const int buttonTwo =  12;
-  const int buttonThree =  11;
-  const int buttonFour =  10;
+  int buttonOne =  1;        // the number of the Button pin
+  int buttonTwo =  2;
+  int buttonThree =  3;
+  int buttonFour =  4;
   
-  const int row = random(10, 14);   //Chooses random light to light up
+  int row = random(10, 14);   //Chooses random light to light up
 
-  const int score;
+  int score;
   
-  const int buttonStateOne = 0;     // Buttons
-  const int buttonStateTwo = 0;  
-  const int buttonStateThree = 0;  
-  const int buttonStateFour = 0;
+  int buttonStateOne = 0;     // Buttons
+  int buttonStateTwo = 0;  
+  int buttonStateThree = 0;  
+  int buttonStateFour = 0;
 
   const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
   LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
