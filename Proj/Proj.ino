@@ -1,11 +1,9 @@
-#include <LiquidCrystal.h>
 
-  
   // Initialize
-  const int rowOne = 13;            // the number of the LED pin
-  const int rowTwo =  12;
-  const int rowThree =  11;
-  const int rowFour =  10;
+  int rowOne = 13;            // the number of the LED pin
+  int rowTwo =  12;
+  int rowThree =  11;
+  int rowFour =  10;
   
   int buttonOne =  1;        // the number of the Button pin
   int buttonTwo =  2;
@@ -13,16 +11,11 @@
   int buttonFour =  4;
   
   int row = random(10, 14);   //Chooses random light to light up
-
-  int score;
   
   int buttonStateOne = 0;     // Buttons
   int buttonStateTwo = 0;  
   int buttonStateThree = 0;  
   int buttonStateFour = 0;
-
-  const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
-  LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
 
 void setup() {
@@ -36,11 +29,6 @@ void setup() {
   pinMode(buttonTwo, INPUT);
   pinMode(buttonThree, INPUT);
   pinMode(buttonFour, INPUT);
-
-  // set up the LCD's number of columns and rows:
-  lcd.begin(3, 1);
-  // Print a message to the LCD.
-  lcd.print(score);
 }
 
 void loop() {
@@ -56,8 +44,6 @@ void loop() {
     if (buttonStateOne == HIGH) {
       // turn LED off:
       digitalWrite(rowOne, LOW);
-      score++;
-      lcd.display();
     }
   }
 
@@ -65,8 +51,6 @@ void loop() {
     if (buttonStateTwo == HIGH) {
       // turn LED off:
       digitalWrite(rowTwo, LOW);
-      score++;
-      lcd.display();
     }
   }
 
@@ -74,8 +58,6 @@ void loop() {
     if (buttonStateThree == HIGH) {
       // turn LED off:
       digitalWrite(rowThree, LOW);
-      score++;
-      lcd.display();
     }
   }
 
@@ -83,8 +65,6 @@ void loop() {
     if (buttonStateFour == HIGH) {
       // turn LED off:
       digitalWrite(rowFour, LOW);
-      score++;
-      lcd.display();
     }
   }
 }
