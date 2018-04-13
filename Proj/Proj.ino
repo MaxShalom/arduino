@@ -5,17 +5,17 @@
   int rowThree =  11;
   int rowFour =  10;
   
-  int buttonOne =  1;        // the number of the Button pin
+  int buttonOne =  1;         // the number of the Button pin
   int buttonTwo =  2;
   int buttonThree =  3;
   int buttonFour =  4;
-  
-  int row = random(10, 14);   //Chooses random light to light up
   
   int buttonStateOne = 0;     // Buttons
   int buttonStateTwo = 0;  
   int buttonStateThree = 0;  
   int buttonStateFour = 0;
+
+  int row;
 
 
 void setup() {
@@ -32,6 +32,8 @@ void setup() {
 }
 
 void loop() {
+  row = random(10, 14);   //Chooses random light to light up
+  
   buttonStateOne = digitalRead(buttonOne);
   buttonStateTwo = digitalRead(buttonTwo);
   buttonStateThree = digitalRead(buttonThree);
