@@ -32,7 +32,8 @@ void setup() {
 }
 
 void loop() {
-  row = random(10, 14);   //Chooses random light to light up
+  
+row = random(10, 14);   //Chooses random light to light up
   
   buttonStateOne = digitalRead(buttonOne);
   buttonStateTwo = digitalRead(buttonTwo);
